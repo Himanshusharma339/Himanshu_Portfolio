@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Professional Portfolio Design System - FAANG Style */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 20% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 14%;
+
+    --primary: 215 90% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 20% 14%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 215 90% 32%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 215 90% 32%;
+
+    --radius: 0.5rem;
+
+    /* Professional Corporate Colors */
+    --navy: 220 20% 14%;
+    --navy-light: 220 15% 30%;
+    --blue-accent: 215 90% 32%;
+    --blue-soft: 214 100% 97%;
+    --gray-50: 220 20% 98%;
+    --gray-100: 220 14% 96%;
+    --gray-200: 220 13% 91%;
+    --gray-400: 220 10% 58%;
+    --gray-600: 220 10% 46%;
+    --gray-900: 220 20% 14%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 90% 32% / 0.03) 0%, hsl(0 0% 100%) 50%, hsl(220 20% 14% / 0.02) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 98%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(220 20% 14%) 0%, hsl(215 90% 32%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 20% 14% / 0.04);
+    --shadow-md: 0 4px 6px -1px hsl(220 20% 14% / 0.06), 0 2px 4px -2px hsl(220 20% 14% / 0.04);
+    --shadow-lg: 0 10px 15px -3px hsl(220 20% 14% / 0.06), 0 4px 6px -4px hsl(220 20% 14% / 0.04);
+    --shadow-xl: 0 20px 25px -5px hsl(220 20% 14% / 0.06), 0 8px 10px -6px hsl(220 20% 14% / 0.04);
+    --shadow-glow: 0 0 30px hsl(215 90% 32% / 0.12);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 215 90% 32%;
+  }
+
+  .dark {
+    --background: 220 20% 7%;
+    --foreground: 220 14% 96%;
+
+    --card: 220 20% 10%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 215 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 220 15% 16%;
+    --muted-foreground: 220 10% 58%;
+
+    --accent: 220 15% 16%;
+    --accent-foreground: 220 14% 96%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 220 14% 96%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 215 85% 55%;
+
+    --navy: 220 14% 96%;
+    --navy-light: 220 10% 58%;
+    --blue-accent: 215 85% 55%;
+    --blue-soft: 220 20% 12%;
+    --gray-50: 220 20% 10%;
+    --gray-100: 220 20% 12%;
+    --gray-200: 220 15% 18%;
+    --gray-400: 220 10% 45%;
+    --gray-600: 220 10% 58%;
+    --gray-900: 220 14% 96%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-text);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s linear infinite;
+    background-size: 200% 100%;
+  }
+}
