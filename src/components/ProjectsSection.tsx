@@ -14,7 +14,7 @@ const projects = [
       'AI-driven evaluation and performance analytics',
     ],
     gradient: 'from-blue-600/10 to-slate-600/10',
-    liveDemo: 'https://ai-interview-mocker.vercel.app',
+    liveDemo: 'https://ai-interview-mocker-ten-hazel.vercel.app/',
     github: 'https://github.com/Himanshusharma339/ai-interview-mocker',
   },
   {
